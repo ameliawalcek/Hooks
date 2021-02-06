@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { ParentComponent } from './components/ParentComponent'
 
-function App() {
+//useCallback is a hook that will return a memoized version of the callback function 
+//that only changes if one of the dependencies has changed
+
+//useful when passing callbacks to optimized children components
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ParentComponent />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
